@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as countAction from '../store/action/count.action'
 
-function Count ({count, increment, decrement}) {
+function Count ({count, increment, decrement, incrementSync}) {
   return (
     <div>
-      <button onClick={() => increment(1)}>+</button>
+      <button onClick={() => incrementSync(1)}>+</button>
       <span>{count}</span>
       <button onClick={() => decrement(1)}>-</button>
     </div>
